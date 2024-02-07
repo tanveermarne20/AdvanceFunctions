@@ -2,7 +2,7 @@
 -- 01.What is view?
 --Ans.View is a database object which is created over an SQL query
 --      View just represent data that is just return by sql querry
---      View does not stores data,but every time you execute querry
+--      View does not stores data,but every time you execute view
 --      it just execute the sql querry
 --      View is like a virtual table     
 --      The difference between Table and View is 
@@ -53,7 +53,6 @@ P.PRICE
 FROM TB_PRODUCT_INFO P JOIN TB_ORDER_DETAILS O
 ON (O.PROD_ID=P.PROD_ID);
 
-DROP VIEW PRODUC_DETAILS_VIEW;
 
 SELECT *
 FROM PRODUCT_DETAILS_VIEW;
