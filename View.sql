@@ -1,7 +1,7 @@
 --====================================================================================================
 -- 01.What is view?
 --Ans.View is a database object which is created over an SQL query
---      View just represent data that is just return by sql querry
+--      View just represent data that is  return by sql querry
 --      View does not stores data,but every time you execute view
 --      it just execute the sql querry
 --      View is like a virtual table     
@@ -52,11 +52,21 @@ P.BRAND,
 P.PRICE
 FROM TB_PRODUCT_INFO P JOIN TB_ORDER_DETAILS O
 ON (O.PROD_ID=P.PROD_ID);
-
-
 SELECT *
 FROM PRODUCT_DETAILS_VIEW;
 
+
+
+CREATE OR REPLACE VIEW PRODUCT_VIEW3
+AS
+SELECT 
+P.PROD_ID,P.PRODUCT_NAME ,O.QUANTITY,O.PURCHASE_DATE
+FROM TB_PRODUCT_INFO P JOIN TB_ORDER_DETAILS O
+ON(P.PROD_ID=O.PROD_ID);
+
+SELECT *
+FROM PRODUCT_VIEW3;
+GRANT SELECT ON PRODUCT_VIEW3 TO JAMES;
 
 --WHY TO USE VIEW?
 --WE CREATE NEW USER FOR THAT PARTICULAR CLIENT
