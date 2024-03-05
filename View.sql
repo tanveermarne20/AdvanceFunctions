@@ -128,5 +128,8 @@ GRANT SELECT ON EXPENSIVE_PRODUCT_VIEW TO JAMES;
 
 
 
+CREATE USER Windows_Function identified by root;
+GRANT ALL PRIVILEGES TO Windows_Function ;
+
 
 

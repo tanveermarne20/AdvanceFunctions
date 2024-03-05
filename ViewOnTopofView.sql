@@ -26,3 +26,11 @@ WHERE CUST_ID='C1';
 GRANT SELECT ON VIEW2 TO JAMES;
 
 --VIEW IS CREATED ON TOP OF VIEW.
+
+
+
+
+
+
+
+-----------------------------------------------------------
